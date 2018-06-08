@@ -3,7 +3,10 @@ CC=gcc
 
 
 pacman: pacman.c
-	$(CC) -o /bin/pacman pacman.c
-	
+	$(CC) -o  pacman pacman.c GRAPH.c
+
+pacmanDebug: pacmanDebug.c
+	$(CC) -o pacmanDebug pacmanDebug.c GRAPH.c
+
 clean:
-	rm /bin/pacman
+	rm -f pacman pacmanDebug 
